@@ -86,4 +86,8 @@ public final class Logic {
         }
         return newStr;
     }
+
+    public static int getSize(String str) {
+        return str.toCharArray().length;
+    }
 }

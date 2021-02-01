@@ -32,4 +32,34 @@ public class StringManipulator {
 
         return mov;
     }
+
+    public String generateDashes(String str, char ch) {
+        String dashes = "_".repeat(str.length());
+
+        String newStr = "";
+        // find a match
+        for (char c:
+                str.toCharArray()) {
+            if (c == ch) {
+                newStr = newStr.concat(String.valueOf(c));
+            }
+            else {
+                newStr = newStr.concat("_");
+            }
+        }
+
+        // print the new string of dashes
+        System.out.println(newStr);
+
+        return newStr;
+    }
+
+    public String generateDashes(String str)
+    {
+        String newStr = "";
+        for (int count = 0; count < str.length(); count++) {
+            newStr = newStr.concat("_");
+        }
+        return newStr;
+    }
 }
