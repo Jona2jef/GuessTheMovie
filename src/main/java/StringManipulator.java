@@ -33,7 +33,13 @@ public class StringManipulator {
         return mov;
     }
 
-    public String generateDashes(String str, char ch) {
+    /**
+     * Creates a string of dashes
+     * @param str Actual String itself
+     * @param ch Character to reveal
+     * @return New formatted String
+     */
+    public String reveal(String str, char ch) {
         String dashes = "_".repeat(str.length());
 
         String newStr = "";
