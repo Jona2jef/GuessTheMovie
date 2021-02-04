@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 
 public class StringManipulator {
     public String getMovie() throws FileNotFoundException {
@@ -54,12 +55,14 @@ public class StringManipulator {
             }
         }
 
-        // print the new string of dashes
-        System.out.println(newStr);
-
         return newStr;
     }
 
+    /**
+     * Generates a String of dashes ("_") equal whose size is definite
+     * @param str The String itself
+     * @return A string of dashes whose size is same as the string
+     */
     public String generateDashes(String str)
     {
         String newStr = "";
@@ -68,4 +71,47 @@ public class StringManipulator {
         }
         return newStr;
     }
+
+    public String fromCharArray(char [] arr) {
+        String str = "";
+        for (char ch:
+             arr) {
+            str = str.concat(String.valueOf(ch));
+        }
+        return str;
+    }
+
+    public String merge(String str1, String str2) {
+        String newStr = "";
+        char [] arr1 = str1.toCharArray();
+        char [] arr2 = str2.toCharArray();
+        char [] arr3 = new char[str1.length()]; // can be str2.length as well
+
+        // first check if both the string sizes are equal
+        if (arr1.length != arr2.length) {
+            System.out.println("Strings must be of same length.");
+            System.exit(1);
+        }
+
+        int count = 0;
+        // first combine string 1
+        for (char ch:
+             arr1) {
+            arr3[count] = ch;
+            count++;
+        }
+
+        // reset count
+        count = 0;
+
+        // then combine string 2
+        for (char ch:
+             arr2) {
+            arr3[count] = ch;
+            count++;
+        }
+
+        return this.fromCharArray(arr3);
+    }
+
 }

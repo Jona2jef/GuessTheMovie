@@ -19,20 +19,25 @@ public class Game {
         // Now comes the actual game logic
         System.out.println("Guess the movie: " + dashes1);
 
+        String dashes2 = "";
 
+        String forChecking = dashes1;
         while(true) {
             // Accept one character
             System.out.println("Enter one character: ");
             char ch = sc.next(".").charAt(0);
 
             // now generate the string of dashes
-            String dashes2 = stringManipulator.reveal(mov, ch);
+            dashes2 = stringManipulator.reveal(mov, ch);
+
             // if the string is just dashes, it means the user didn't guess the correct letter
             if (dashes2.equals(dashes1))
                 wrong_words++;
-            else {
-                dashes1 = dashes2;
-            }
+            else
+                dashes2 = stringManipulator.merge(dashes2, dashes1);
+
+            System.out.println("You entered: " + dashes2);
+
             System.out.println("You have guessed: " + wrong_words + " wrong letters");
 
             // keep track of the number of letters revealed
@@ -51,8 +56,7 @@ public class Game {
                 System.out.println("You win!");
                 break;
             }
-
-
+            dashes1 = stringManipulator.merge(dashes2, dashes1);
         }
 
     }
