@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=StringManipulator
+comment0.text=\r\n\ This\ class\ contains\ a\ set\ of\ methods\ useful\ in\ games\ like\ hangman\ and\ dumb-charades\ -\ games\ that\ involve\ string\ manipulation.\r\n\ This\ code\ is\ free\ to\ use,\ modify\ and\ re-distribute.\r\n\ \r\n\ @author\ Jonathan\ Gerard\ (jona2jef@gmail.com)\r\n\ @version\ 0.1.0\r\n
+comment1.params=str
+comment1.target=java.lang.String\ removeSpaces(java.lang.String)
+comment1.text=\r\n\ Remove\ all\ spaces\ and\ special\ characters\ in\ a\ string\r\n\ \r\n\ @param\ str\ A\ string\ value\ which\ is\ to\ be\ filtered.\r\n
+comment2.params=str
+comment2.target=java.lang.String\ generateDash(java.lang.String)
+comment2.text=\r\n\ Generate\ a\ string\ of\ dashes\ whose\ length\ is\ equivalent\ to\ a\ given\ string.\r\n\ @param\ str\ A\ string\ value\r\n
+comment3.params=str\ ch
+comment3.target=java.lang.String\ reveal(java.lang.String,\ char)
+comment3.text=\r\n\ Reveal\ a\ character\ in\ a\ string\ of\ dashes\ using\ the\ help\ of\ the\ original\ string.\r\n\ \r\n\ @param\ str\ the\ String\ currently\ being\ handled.\r\n\ @param\ ch\ The\ character\ that\ must\ be\ revealed.\r\n
+comment4.params=str\ other
+comment4.target=java.lang.String\ combine(java.lang.String,\ java.lang.String)
+comment4.text=\r\n\ Combine\ two\ strings\ of\ the\ same\ length.\r\n\ Parameters\ can\ be\ interchanged,\ but\ must\ definitely\ be\ of\ SAME\ LENGTH.\r\n\ @param\ str\ Original\ string\ (or\ first\ string)\r\n\ @param\ other\ Other\ string\ (or\ second\ string)\r\n
+numComments=5

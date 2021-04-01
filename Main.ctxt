@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=str
+comment2.target=int\ findLetters(java.lang.String)
+comment3.params=file
+comment3.target=int\ getLines(java.io.File)
+numComments=4
